@@ -4,7 +4,7 @@
 
 CREATE TABLE beepcore.users
 (
-    usr_id integer NOT NULL,
+    usr_id integer NOT NULL DEFAULT nextval('beepcore.users_usr_id_seq'::regclass),
     usr_dtins timestamp with time zone,
     usr_userins character varying(50) COLLATE pg_catalog."default",
     usr_trnins bigint,
